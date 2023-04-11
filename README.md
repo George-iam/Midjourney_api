@@ -2,6 +2,7 @@
 unofficial Midjourney API
 
 This is custom Midjourney API. Using it you could generate images by code. Working on Discord API.
+!! Don't forget Modjourney TOS doesn't allow any automation, so this project is research only purpose !!
 
 Contains: 
 - Sender: for sending prompts to Midjourney
@@ -29,7 +30,8 @@ python //path/to/cloned/dir/sender.py --params /path/to/cloned/dir/sender_params
 Take care of controling number of parralel requests - for normal and fastest work it should be not bigger than 3(in Basic and Standard plan, and 12 in Pro plan).
 
 
-Project comments
+Project comments:
+
 This is the first simple API version, now I'm working on next one with:
 - local queue controller
 - ability to work with any number of Midjourney accounts in parralel to get much better and scalable performance
@@ -37,7 +39,8 @@ This is the first simple API version, now I'm working on next one with:
 - And lots of other things.
 
 
-Contacts
+Contacts:
+
 For proposals and cooperation:
 normalabnormalai@gmail.com
 
