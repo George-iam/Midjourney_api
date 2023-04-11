@@ -36,3 +36,9 @@ This is the first simple API version, now I'm working on next one with:
 - Upsampling script to send upsample request
 - And lots of other things.
 
+
+Contacts
+For proposals and cooperation:
+normalabnormalai@gmail.com
+
+To help the project, USDT (ERC20) wallet: 0x589c18c17ef4fea0acea476fd4973dc5da82835c
