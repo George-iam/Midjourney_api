@@ -22,7 +22,7 @@ Copy channelid, authorization, application_id, guild_id, session_id, version and
 7. Open "sender_params.json" file and put all the values from paragraph 5 to it. Also fill in 'flags' field to specify special flags to your prompts
 8. Now you are ready to run files:
 - To start receiver script open terminal and type:
-python /path/to/cloned/dir/receiver.py --params /path/to/cloned/dir/sender_params.json --local_path '/path/to/folder/for/downloadind/images'
+python /path/to/cloned/dir/receiver.py --params /path/to/cloned/dir/sender_params.json --local_path '/path/to/folder/for/downloading/images'
 This script will show you all the generating progress and download images as soon as it will be ready
 - To send prompts for generation open another terminal and type:
 python //path/to/cloned/dir/sender.py --params /path/to/cloned/dir/sender_params.json --prompt 'your prompt here'
