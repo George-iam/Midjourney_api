@@ -2,6 +2,7 @@
 unofficial Midjourney API
 
 This is custom Midjourney API. Using it you could generate images by code. Working on Discord API.
+
 !! Don't forget Modjourney TOS doesn't allow any automation, so this project is research only purpose !!
 
 Contains: 
