@@ -1,19 +1,29 @@
 import time
 from flask import Flask, request, jsonify
-from sender import Sender 
+from sender import Sender
 from url_receiver import Receiver
 
 # 创建 Flask 应用
 app = Flask(__name__)
 
+request_in_progress = False
+
 # 创建一个 API 路由，接受 POST 请求，用户通过关键词参数发送请求
 @app.route('/api/send_and_receive', methods=['POST'])
 def send_and_receive():
+    global request_in_progress
+
+    if request_in_progress:
+        return jsonify({'error': 'The current queue is full, please try again later（当前队列已满，请稍后再试）'})
+
+    request_in_progress = True
+
     # 从请求中获取关键词参数
     data = request.get_json()
     prompt = data.get('prompt')
     sender = Sender(params)
     sender.send(prompt)
+
     # 使用 Receiver 类接收图片 URL
     receiver = Receiver(params)
     receiver.collecting_results()
@@ -41,8 +51,10 @@ def send_and_receive():
         latest_image_url = receiver.df.loc[latest_image_id].url
     else:
         latest_image_url = None
-  
-# 将最新图片的URL作为响应返回
+
+    request_in_progress = False
+
+    # 将最新图片的URL作为响应返回
     return jsonify({'latest_image_url': latest_image_url})
 
 if __name__ == "__main__":
