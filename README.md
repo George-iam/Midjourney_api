@@ -27,6 +27,7 @@ This script will show you all the generating progress and download images as soo
 - To send prompts for generation open another terminal and type:
 python //path/to/cloned/dir/sender.py --params /path/to/cloned/dir/sender_params.json --prompt 'your prompt here'
 - To use external API, python app.py, post a request to http://localhost:5000/api/send_and_receive".
+
 Example:
 import requests
 import json
