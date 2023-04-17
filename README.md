@@ -1,3 +1,4 @@
+[中文版本](https://github.com/CelestialRipple/Midjourney_api/blob/main/README_zh-CN.md)
 # Midjourney_api
 unofficial Midjourney API
 
