@@ -128,11 +128,12 @@ def send_and_receive():
     if current_image_count > initial_image_count:
         latest_image_id = receiver.df.index[-1]
         latest_image_url = receiver.df.loc[latest_image_id].url
+        latest_filename = receiver.df.loc[latest_image_id].filename
         cdn = request.args.get('cdn', False)
         if cdn:
             image_filename = download_image(latest_image_url)
             latest_image_url = f"/images/{image_filename}"
-         conn = sqlite3.connect('images.db')
+        conn = sqlite3.connect('images.db')
         c = conn.cursor()
         c.execute("INSERT OR REPLACE INTO images (message_id, url, filename) VALUES (?, ?, ?)",
                   (latest_image_id, latest_image_url, latest_filename))
