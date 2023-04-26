@@ -27,14 +27,24 @@ python /path/to/cloned/dir/receiver.py --params /path/to/cloned/dir/sender_param
 This script will show you all the generating progress and download images as soon as it will be ready
 - To send prompts for generation open another terminal and type:
 python //path/to/cloned/dir/sender.py --params /path/to/cloned/dir/sender_params.json --prompt 'your prompt here'
-- To use external API, python app.py, post a request to http://localhost:5000/api/send_and_receive".
 
+9. Enjoy :)
+
+Take care of controling number of parralel requests - for normal and fastest work it should be not bigger than 3(in Basic and Standard plan, and 12 in Pro plan).
+
+## (Updated) Introduction to the use of external APIs:
+- To use the external API, nano app.py (configure cross-domain with sender_params.json file path)
+- python app.py
+### Request method
+- post request: http://localhost:5000/api/send_and_receive"
+- Optional parameter: cdn=true (default false, when enabled the server will cache the image before sending, chinese access is more friendly)
 Example:
+```python
 import requests
 import json
 
 payload = {
-    "prompt": "YOUR_PROMPT_HERE"
+    "prompt": "your_prompt_here"
 }
 
 url = "http://localhost:5000/api/send_and_receive";
@@ -42,11 +52,33 @@ url = "http://localhost:5000/api/send_and_receive";
 response = requests.post(url, data=json.dumps(payload), headers={'Content-Type': 'application/json'})
 
 print(response.json())
+```
+- get request: http://localhost:5000/upscale"
+- Mandatory parameter: file_name(string), the name of the file that needs to be executed upscale (e.g. rockgifinrock1971_link_and_zelda_33e8886f-adae-4579-9882-bae644005f5b.png)
+- Mandatory parameter: number (number), the serial number of the image that needs to be executed upscale (example 1/2/3/4).
+- Optional parameters: cdn=true (default false, after enabling the server will cache pictures before sending, continental access more friendly)
+Example:
+```python
+import requests
 
-9. Enjoy :)
+base_url = 'http://localhost:5000' # Replace with the URL your Flask application is actually running on
+file_name = 'rockgifinrock1971_link_and_zelda_33e8886f-adae-4579-9882-bae644005f5b.png' # Replace with your actual file name
+number = 3 # Replace with the number you want to use
 
-Take care of controling number of parralel requests - for normal and fastest work it should be not bigger than 3(in Basic and Standard plan, and 12 in Pro plan).
+response = requests.get(f'{base_url}/upscale', params={'file_name': file_name, 'number': number})
 
+if response.status_code == 200.
+    print('Success!')
+    print(response.json())
+else.
+    print(f'Error: {response.status_code}')
+    print(response.text)
+```
+
+### CDN cached images exist in the same directory folder and can be cleaned up on demand. The database is automatically refreshed every 24 hours to prevent expired images.
+- 中文支持可以联系me@hiripple.com
+
+Translated with www.DeepL.com/Translator (free version)
 
 Project comments:
 
