@@ -78,7 +78,6 @@ else.
 ### CDN cached images exist in the same directory folder and can be cleaned up on demand. The database is automatically refreshed every 24 hours to prevent expired images.
 - 中文支持可以联系me@hiripple.com
 
-Translated with www.DeepL.com/Translator (free version)
 
 Project comments:
 
