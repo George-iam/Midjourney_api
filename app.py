@@ -132,6 +132,15 @@ def send_and_receive():
         if cdn:
             image_filename = download_image(latest_image_url)
             latest_image_url = f"/images/{image_filename}"
+         conn = sqlite3.connect('images.db')
+        c = conn.cursor()
+        c.execute("INSERT OR REPLACE INTO images (message_id, url, filename) VALUES (?, ?, ?)",
+                  (latest_image_id, latest_image_url, latest_filename))
+        conn.commit()
+        conn.close()
+
+        # 输出存储在数据库中的数据
+        print_stored_data()
     else:
         latest_image_url = None
     request_in_progress = False
