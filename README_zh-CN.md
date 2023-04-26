@@ -93,5 +93,3 @@ normalabnormalai@gmail.com
 为了帮助该项目，USDT（ERC20）钱包：0x589c18c17ef4fea0acea476fd4973dc5da82835c
 
 
-
-通过www.DeepL.com/Translator（免费版）翻译
