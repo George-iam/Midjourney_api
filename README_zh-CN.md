@@ -30,10 +30,10 @@ python //path/to/cloned/dir/sender.py --params /path/to/cloned/dir/sender_params
 
 注意控制并行请求的数量 - 对于正常和最快的工作，它不应该大于3（在基本和标准计划中，专业计划中为12）。
 
-##（更新）外部API使用介绍：
+## （更新）外部API使用介绍：
 - 要使用外部API，nano app.py（配置跨域与sender_params.json文件路径)
 - python app.py
-## 请求方式
+### 请求方式
 - post请求：http://localhost:5000/api/send_and_receive"
 - 可选参数：cdn=true(默认false，启用后服务器将缓存图片然后再发送，大陆访问更友好）
 例子：
@@ -74,6 +74,7 @@ else:
 ```
 
 ### CDN缓存的图片存在同目录文件夹下，可按需清理。数据库每24小时自动刷新，防止过期图片。
+- 中文支持可以联系me@hiripple.com
 
 项目评论：
 
