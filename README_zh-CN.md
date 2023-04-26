@@ -8,6 +8,7 @@
 包含： 
 - 发送器：用于向Midjourney发送提示信息。
 - 接收器：在终端工作，将所有完成的图像下载到本地文件夹。
+- web_api：提供API服务
 
 安装：
 1. 创建Discord账户，并创建你的服务器(指示在这里: https://discord.com/blog/starting-your-first-discord-server)
@@ -90,6 +91,7 @@ else:
 normalabnormalai@gmail.com
 
 为了帮助该项目，USDT（ERC20）钱包：0x589c18c17ef4fea0acea476fd4973dc5da82835c
+
 
 
 通过www.DeepL.com/Translator（免费版）翻译
