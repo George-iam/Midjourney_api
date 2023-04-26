@@ -85,7 +85,7 @@ def send_and_receive():
     global request_in_progress
 
     if request_in_progress:
-        return jsonify({'error': 'The current queue is full, please try again later（当前队列已满，请稍后再试）'>
+        return jsonify({'error': 'The current queue is full, please try again later（当前队列已满，请稍后再试）'})
 
     request_in_progress = True
 
