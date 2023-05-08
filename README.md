@@ -47,6 +47,4 @@ For proposals and cooperation:
 
 email: normalabnormalai@gmail.com
 
-WeChat ID: george-iam
-
 Discord: georgeb#0907
