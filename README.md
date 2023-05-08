@@ -17,7 +17,8 @@ Installation:
 Select Network tab, you'll see all the network activity of your page.
 5. Now type any prompt to generate in your text channel, and after you press Enter to send message with prompt, you'll see in Network Activity new line named "interaction".
 Press on it and choose Payload tab and you'll see payload_json - that's what we need!
-Copy channelid, authorization, application_id, guild_id, session_id, version and id values, we'll need it a little bit later.
+Copy channelid, application_id, guild_id, session_id, version and id values, we'll need it a little bit later.
+Then move from Payload tab to Headers tab and find "authorization" field, copy it's value too.
 6. Clone this repo
 7. Open "sender_params.json" file and put all the values from paragraph 5 to it. Also fill in 'flags' field to specify special flags to your prompts
 8. Now you are ready to run files:
